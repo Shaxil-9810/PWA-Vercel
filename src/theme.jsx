@@ -16,6 +16,15 @@ const theme = createTheme({
           background: "black", // Replace with your desired color
           color: "white", // Replace with your desired color
         },
+        outlined: {
+          borderColor: "#252A48",
+          // Replace with your desired color
+          color: "#252A48", // Replace with your desired color
+          "&:hover": {
+            backgroundColor: "#7860F7",
+            color: "#ffffff",
+          },
+        },
       },
     },
   },

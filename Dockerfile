@@ -1,16 +1,16 @@
-FROM node:18-alpine
+FROM node:18-bullseye-slim
+
+# Updating repos
+RUN apt update
 
 # Setting working directory to run command inside project
 WORKDIR /var/www
 
 # Copy dependency definitions
-COPY ./package*.json ./
+COPY . .
 
 # Installing dependencies
 RUN npm install --silent
-
-# Get all the code needed to run the app
-COPY ./ .
 
 # Expose the port the app runs in
 EXPOSE 5173

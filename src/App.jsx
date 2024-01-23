@@ -7,6 +7,9 @@ import GettingStarted from "./onboarding/GettingStarted";
 import Layout from "./onboarding/Layout";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import InfoDetailsLayout from "./onboarding/InfoDetailsLayout";
+import LoginLayout from "./login/LoginLayout";
+import ProtectedRoute from "./RouteProtection/ProtectedRoute";
+import SignUpLayout from "./onboarding/SignUpLayout";
 
 function App() {
   return (
@@ -14,7 +17,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Layout />} />
-          <Route path="/on-boarding" element={<InfoDetailsLayout/>}/>
+          <Route path="/sign-up" element={<SignUpLayout/>}/>
+          <Route path="/on-boarding" element={<InfoDetailsLayout />} />
+          <Route path="/login/*" element={<LoginLayout />} />
         </Routes>
       </BrowserRouter>
     </div>

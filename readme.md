@@ -7,7 +7,7 @@
 - To run your project in docker run following command at the same directory level inside the terminal
 
 ```bash
-docker compose up -d
+docker-compose up -d
 ```
 
 - To remove containers run

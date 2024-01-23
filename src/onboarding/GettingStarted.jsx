@@ -10,7 +10,7 @@ import { useNavigate } from "react-router-dom";
 const GettingStarted = () => {
   const navigate = useNavigate();
   const handleNavigatetoOnboarding=()=>{
-    navigate("/on-boarding");
+    navigate("/sign-up");
   }
   return (
     <div className="h-screen">
@@ -28,7 +28,7 @@ const GettingStarted = () => {
           by advancing the business of pharmacy.
         </Typography>
       </div>
-      <div className="flex md:flex-row sm:flex-col justify-center lg:items-center md:items-center sm:items-center   mt-10">
+      <div className="flex md:flex-row sm:flex-col justify-center lg:items-center md:items-center sm:items-center mt-10 m-4">
         <Grid
           container
           spacing={0}
@@ -139,7 +139,7 @@ const GettingStarted = () => {
           </Grid>
         </Grid>
       </div>{" "}
-      <div className="flex justify-around mt-8">
+      <div className="flex justify-around mt-8 pb-4">
         <Button
           variant="contained"
           className="bg-white"

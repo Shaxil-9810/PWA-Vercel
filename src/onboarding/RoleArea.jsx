@@ -1,17 +1,23 @@
-import { Box, Button, FormControl, InputLabel, MenuItem, Select, TextField, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+  Typography,
+} from "@mui/material";
 import React from "react";
 
-const RoleArea = ({proceedToNextStep}) => {
+const RoleArea = ({ proceedToNextStep, goToPrevStep }) => {
   return (
     <div className="">
       <Box
+        className="p-6 m-2 lg:w-[28rem] lg:m-0 lg:p-8 lg:ml-24 md:w-auto md:p-6 md:m-0"
         sx={{
-          width: "28rem",
-          height: "100%",
-          marginLeft: "6rem",
           borderRadius: "15px",
           backgroundColor: "white",
-          padding: "2rem",
         }}
       >
         <div>
@@ -19,24 +25,11 @@ const RoleArea = ({proceedToNextStep}) => {
             Select Role and Area
           </Typography>
           <Typography className="mt-2">
-            Please add your basic info below
+            Please select your role and location
           </Typography>
         </div>
-        <div className="mt-8">
-        <FormControl fullWidth className="mt-3">
-            <InputLabel id="demo-simple-select-label">User Role</InputLabel>
-            <Select
-              labelId="demo-simple-select-label"
-              id="demo-simple-select"
-              //value={age}
-              label="User Role"
-             // onChange={handleChange}
-            >
-              <MenuItem value={10}>Test 1</MenuItem>
-              <MenuItem value={20}>Test 2</MenuItem>
-              <MenuItem value={30}>Test 3</MenuItem>
-            </Select>
-          </FormControl>
+        <div className="mt-4">
+        
           <FormControl fullWidth className="mt-3">
             <InputLabel id="demo-simple-select-label">Your Location</InputLabel>
             <Select
@@ -44,19 +37,26 @@ const RoleArea = ({proceedToNextStep}) => {
               id="demo-simple-select"
               //value={age}
               label="Your Location"
-             // onChange={handleChange}
+              // onChange={handleChange}
             >
               <MenuItem value={10}>Kentucky</MenuItem>
               <MenuItem value={20}>Texas</MenuItem>
               <MenuItem value={30}>Detroit</MenuItem>
             </Select>
           </FormControl>
-
         </div>
         <div>
           <Button
+            variant="outlined"
+            className="mt-4"
+            size="large"
+            onClick={goToPrevStep}
+          >
+            BACK
+          </Button>
+          <Button
             variant="contained"
-            className="bg-[#252A48]  mt-4"
+            className="bg-[#252A48] mt-4 ml-2"
             size="large"
             onClick={proceedToNextStep}
           >
